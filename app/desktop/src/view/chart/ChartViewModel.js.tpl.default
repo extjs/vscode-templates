@@ -1,7 +1,0 @@
-Ext.define('{appName}.view.chart.ChartViewModel', {
-	extend: 'Ext.app.ViewModel',
-	alias: 'viewmodel.chartviewmodel',
-	data: {
-		name: '{appName}'
-	}
-});
