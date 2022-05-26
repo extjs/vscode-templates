@@ -1,0 +1,97 @@
+Ext.define('{appName}.view.chart.DashboardView', {
+    extend: 'Ext.container.Container',
+    xtype: 'dashboardview',
+    cls: 'dashboardview',
+    controller: 'dashboardviewcontroller',
+    viewModel: {
+        type: 'dashboardviewmodel'
+    },
+    requires: [
+        'Ext.chart.*'
+    ]
+
+    items: [{
+        xtype: 'cartesian',
+        title: 'Dashboard',
+        width: 500,
+        height: 500,
+
+        innerPadding: {
+            top: 50,
+            left: 10,
+            right: 10,
+            bottom: 0
+        },
+
+        store: {
+            fields: ['text', 'value', 'value2'],
+            data: [{
+                    text: 'Jan-19',
+                    value: 40,
+                    value2: 30
+                }, {
+                    text: 'Feb-19',
+                    value: 30,
+                    value2: 10
+                }, {
+                    text: 'Mar-19',
+                    value: 30,
+                    value2: 20
+                }, {
+                    text: 'Apr-19',
+                    value: 40,
+                    value2: 10
+                }, {
+                    text: 'May-19',
+                    value: 30,
+                    value2: 20
+                }, {
+                    text: 'Jun-19',
+                    value: 20,
+                    value2: 10
+                }
+            ]
+        },
+        axes: [{
+                type: 'category',
+                position: 'bottom',
+                fields: ['text']
+            }, {
+                type: 'numeric',
+                position: 'left',
+                fields: ['value', 'value2']
+            }
+        ],
+        series: [{
+                type: 'bar',
+                xField: 'text',
+                yField: 'value',
+                colors: [
+                    '#388E3C'
+                ],
+                label: {
+                    field: 'value',
+                    display: 'outside',
+                    orientation: 'horizontal',
+                    fontWeight: 'bold',
+                    fontSize: '40px',
+                    strokeStyle: 'none',
+                    fillStyle: 'yellow'
+                }
+            }, {
+                type: 'bar',
+                xField: 'text',
+                yField: 'value2',
+                label: {
+                    field: 'value2',
+                    display: 'outside',
+                    orientation: 'horizontal',
+                    fontWeight: 'bold',
+                    fontSize: '40px',
+                    strokeStyle: 'none',
+                    fillStyle: 'yellow'
+                }
+            }
+        ]
+    }]
+});

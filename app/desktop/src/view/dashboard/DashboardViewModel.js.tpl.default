@@ -1,0 +1,7 @@
+Ext.define('{appName}.view.login.DashboardViewModel', {
+	extend: 'Ext.app.ViewModel',
+	alias: 'viewmodel.dashboardviewmodel',
+	data: {
+		name: '{appName}'
+	}
+});
