@@ -1,0 +1,10 @@
+{
+  "leaf": false,
+  "children": [
+    { "text": "Home", "iconCls": "x-fa fa-home", "xtype": "homeview", "leaf": true },
+    { "text": "Personnel", "iconCls": "x-fa fa-table", "xtype": "personnelview","leaf": true },
+    { "text": "Login", "iconCls": "x-fa fa-table", "xtype": "loginview","leaf": true },
+    { "text": "Charts", "iconCls": "x-fa fa-table", "xtype": "chartview","leaf": true },
+    { "text": "Dashboard", "iconCls": "x-fa fa-table", "xtype": "dashboardview","leaf": true }
+  ]
+}
